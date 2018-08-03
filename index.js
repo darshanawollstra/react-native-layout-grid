@@ -35,12 +35,12 @@ export default class GridLayout extends Component {
   renderGroup = (group) => {
     // push empty data inside list if number of items is not equal to itemsPerRow
     const { itemsPerRow, renderItem } = this.props;
-    /*if (group.length < itemsPerRow) {
+    if (group.length < itemsPerRow) {
         const difference = itemsPerRow - group.length;
         for (let x = 0; x < difference; x += 1) {
             group.push(undefined);
         }
-    }*/
+    }
 
     const items = group.map((item, index) => (
       <View style={styles.group} key={random()}>
@@ -63,7 +63,7 @@ export default class GridLayout extends Component {
       <ListView
         {...this.props}
         renderRow={this.renderGroup}
-        enableEmptySections={true}
+        enableEmptySections
         dataSource={ds.cloneWithRows(groups)}
       />
     );
