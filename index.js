@@ -18,11 +18,15 @@ export default class GridLayout extends Component {
   groupItems = (items, itemsPerRow) => {
     const itemsGroups = [];
     let group = [];
-    items.forEach((item) => {
+    const length = items.length;
+    items.forEach((item, i) => {
       if (group.length === itemsPerRow) {
         itemsGroups.push(group);
         group = [item];
       } else {
+           if (length === i+1) {
+            item.type = 0;
+           }
         group.push(item);
       }
     });
