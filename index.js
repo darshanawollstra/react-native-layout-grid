@@ -37,7 +37,7 @@ export default class GridLayout extends Component {
     const { itemsPerRow, renderItem } = this.props;
 
     const items = group.map((item, index) => (
-      <View style={styles.group} key={random()}>
+      <View style={styles.group, flex: 0.5} key={random()}>
         {renderItem(item, index)}
       </View>
     ));
