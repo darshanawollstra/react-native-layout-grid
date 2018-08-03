@@ -19,7 +19,7 @@ export default class GridLayout extends Component {
     const itemsGroups = [];
     let group = [];
     const length = items.length;
-    items.forEach((item, i) => {
+    items.map((item, i) => {
       if (length === i+1) {
           item.type = 0;
       }
