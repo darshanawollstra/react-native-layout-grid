@@ -19,14 +19,12 @@ export default class GridLayout extends Component {
     const itemsGroups = [];
     let group = [];
     items.forEach((item) => {
-      /*if (group.length === itemsPerRow) {
+      if (group.length === itemsPerRow) {
         itemsGroups.push(group);
         group = [item];
       } else {
         group.push(item);
-      }*/
-      itemsGroups.push(group);
-      group = [item];  
+      }
     });
     if (group.length > 0) {
       itemsGroups.push(group);
@@ -66,7 +64,7 @@ export default class GridLayout extends Component {
       <ListView
         {...this.props}
         renderRow={this.renderGroup}
-        enableEmptySections
+        enableEmptySections={true}
         dataSource={ds.cloneWithRows(groups)}
       />
     );
