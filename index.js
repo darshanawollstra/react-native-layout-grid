@@ -20,13 +20,13 @@ export default class GridLayout extends Component {
     let group = [];
     const length = items.length;
     items.forEach((item, i) => {
+      if (length === i+1) {
+          item.type = 0;
+      }
       if (group.length === itemsPerRow) {
         itemsGroups.push(group);
         group = [item];
       } else {
-           if (length === i+1) {
-            item.type = 0;
-           }
         group.push(item);
       }
     });
