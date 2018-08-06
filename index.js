@@ -19,7 +19,7 @@ export default class GridLayout extends Component {
     const itemsGroups = [];
     let group = [];
     let length = 0;
-    if (items.length)
+    if (items)
         length =  items.length;
     items.map((item, i) => {
       if (length === i+1) {
