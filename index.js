@@ -22,8 +22,9 @@ export default class GridLayout extends Component {
     if (items) {
         length =  items.length;
         items.map((item, i) => {
+          item.type = true
           if (length === i+1) {
-              item.type = 0;
+              item.type = false;
           }
           if (group.length === itemsPerRow) {
             itemsGroups.push(group);
