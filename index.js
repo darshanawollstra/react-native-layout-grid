@@ -23,6 +23,7 @@ export default class GridLayout extends Component {
         length =  items.length;
         items.map((item, i) => {
           item.type = true
+          console.log("Type is ", item.type)
           if (length === i+1) {
               item.type = false;
           }
